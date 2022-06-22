@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import likeIcon from "../../../assets/icon-like.svg";
+import likeIconWhite from "../../../assets/icon-like-white.svg";
 
 const MainButton = styled.button`
   display: inline-flex;
@@ -15,6 +17,36 @@ const MainButton = styled.button`
   background-color: ${(props) => props.backgroundColor};
   color: ${(props) => props.textColor};
   cursor: pointer;
+  &.btn-top {
+    border-radius: 0.4rem 0.4rem 0 0;
+    width: 6.4rem;
+    height: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    img {
+      height: 3em;
+      margin: -2rem 0;
+    }
+  }
+  &.btn-like {
+    width: 12rem;
+    height: 4rem;
+    padding-left: 3rem;
+    border: 1px solid rgba(243, 124, 75, 0.5);
+    background: #fff url(${likeIcon}) no-repeat 2.5rem 50% / 2.4rem;
+    transition: all 0.3s;
+    &:hover,
+    &.active {
+      background: rgb(243, 124, 75) url(${likeIconWhite}) no-repeat 2.5rem 50% /
+        2.4rem;
+      color: #fff;
+    }
+    &:focus {
+      outline-color: rgba(243, 124, 75, 0.2);
+      box-shadow: none;
+    }
+  }
 `;
 
 const ButtonImg = styled.img`
@@ -25,12 +57,20 @@ const ButtonImg = styled.img`
 
 const ButtonText = styled.text``;
 
-const Button = ({ text, imgSrc, backgroundColor, textColor, ...props }) => {
+const Button = ({
+  text,
+  imgSrc,
+  backgroundColor,
+  textColor,
+  buttonType,
+  ...props
+}) => {
   return (
     <MainButton
       {...props}
       backgroundColor={backgroundColor}
       textColor={textColor}
+      className={buttonType}
     >
       <ButtonImg src={imgSrc}></ButtonImg>
       <ButtonText>{text}</ButtonText>
