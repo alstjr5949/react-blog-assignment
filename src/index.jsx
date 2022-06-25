@@ -4,11 +4,15 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import App from "./App";
+import Header from "./components/modules/Header/Header";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   ${reset}
   html {
-    font-size: 100%;
+    font-size: 10px;
+  }
+  body {
+    background-color: #f9f9f9;
   }
   a{
     text-decoration : none;
@@ -25,10 +29,9 @@ const GlobalStyle = createGlobalStyle`
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <Router>
-      <GlobalStyle />
-      <App />
-    </Router>
-  </React.StrictMode>
+  <Router>
+    <GlobalStyle />
+    <Header />
+    <App />
+  </Router>
 );
