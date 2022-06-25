@@ -13,7 +13,7 @@ const MainButton = styled.button`
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 1;
-  padding: 0.2rem 0.8em 0;
+  padding: 0.2rem 1.9rem 0;
   background-color: ${(props) => props.backgroundColor};
   color: ${(props) => props.textColor};
   cursor: pointer;
@@ -55,7 +55,7 @@ const ButtonImg = styled.img`
   vertical-align: middle;
 `;
 
-const ButtonText = styled.text``;
+const ButtonText = styled.p``;
 
 const Button = ({
   text,
