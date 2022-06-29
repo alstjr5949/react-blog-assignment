@@ -47,6 +47,20 @@ const MainButton = styled.button`
       box-shadow: none;
     }
   }
+  &.btn-back {
+    border-radius: 0 0.4rem 0.4rem 0;
+    font-size: 1.6rem;
+    height: 6.4rem;
+    width: 6.4rem;
+    position: relative;
+    img {
+      height: 4rem;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
 `;
 
 const ButtonImg = styled.img`

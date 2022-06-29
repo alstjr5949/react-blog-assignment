@@ -4,6 +4,7 @@ import LogoutImg from "../../../assets/icon-logout.svg";
 import ResisterImg from "../../../assets/icon-register.svg";
 import WriteImg from "../../../assets/icon-modify-white.svg";
 import ArrowTop from "../../../assets/ArrowTop.svg";
+import ArrowLeft from "../../../assets/ArrowLeft-blue.svg";
 
 export default {
   title: "Atoms / Button",
@@ -52,4 +53,10 @@ TopButton.args = {
   backgroundColor: "rgb(55, 170, 236)",
   textColor: "#FFF",
   buttonType: "btn-top",
+};
+
+export const BackButton = Template.bind({});
+BackButton.args = {
+  imgSrc: ArrowLeft,
+  buttonType: "btn-back",
 };
