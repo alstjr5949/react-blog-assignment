@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import App from "./App";
+import Footer from "./components/modules/Footer/Footer";
 import Header from "./components/modules/Header/Header";
 
 export const GlobalStyle = createGlobalStyle`
@@ -33,5 +34,6 @@ root.render(
     <GlobalStyle />
     <Header />
     <App />
+    <Footer />
   </Router>
 );
