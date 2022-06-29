@@ -16,3 +16,12 @@ MainBanner.args = {
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nostrum dolor provident beatae deserunt magnam, illo neque. Maiores ipsum commodi dolorum beatae aliquid laboriosam est",
 };
+
+export const PostBanner = Template.bind({});
+PostBanner.args = {
+  imgSrc: BannerBg,
+  subText: "May",
+  mainText: "25",
+  description: "Wed",
+  bannerType: "blog-banner",
+};
