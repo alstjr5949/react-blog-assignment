@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import CategoryButton from "../../atoms/CategoryButton/categoryButton";
 import ProfileImg from "../../atoms/ProfileImg/profile-img";
 import Thumbnail from "../../atoms/ThumbnailImg/thumbnailImg";
 
 // a 링크는 추후에 다 Link로 교체
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   display: block;
   overflow: hidden;
   border-radius: 0.4rem;
@@ -96,6 +97,7 @@ const AuthorInfoListBox = styled.ul`
 `;
 
 const BlogCard = ({
+  href,
   thumbnail,
   category = [],
   title,
@@ -105,7 +107,7 @@ const BlogCard = ({
   children,
 }) => {
   return (
-    <StyledLink href="#">
+    <StyledLink to={href}>
       <BlogCardWrapper>
         <Thumbnail imgSrc={thumbnail} />
         <div className="contents-wrap">
