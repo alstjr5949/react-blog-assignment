@@ -8,6 +8,7 @@ import writeImg from "../../../assets/icon-modify-white.svg";
 import logoutImg from "../../../assets/icon-logout.svg";
 
 const StyledHeader = styled.header`
+  background-color: #fff;
   & > div {
     display: flex;
     align-items: center;
@@ -42,7 +43,7 @@ const Header = () => {
           <NavListBox>
             <NavList>
               <a href="#">
-                <ProfileImg imgSrc="assets/profile.jpg" size="middle" />
+                <ProfileImg imgSrc="/assets/profile.jpg" size="middle" />
               </a>
             </NavList>
             <NavList>
